@@ -8,6 +8,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
+canonifyURLs = true
+relativeURLs = true
 
 [module]
   [module.hugoVersion]
