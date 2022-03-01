@@ -1,4 +1,53 @@
 baseURL = 'https://docs.sprie.io'
 languageCode = 'en-us'
 title = 'Sprie Widget Docs'
-theme = "ananke"
+themesDir = "themes"
+theme = "hugo-whisper-theme"
+
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+# Controls how many words are printed in the content summary on the docs homepage.
+# See https://gohugo.io/content-management/summaries/
+summaryLength = 30
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 2
+
+[params]
+  google_analytics_id=""
+  homepage_button_link = '/docs'
+  homepage_button_text = 'Read The Docs'
+  homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
+  homepage_image = '/images/terminal.gif'
+
+  ## You can enable to add anchor links to header elements
+  # enable_anchor_link = true
+
+  [params.homepage_meta_tags]
+    meta_description = "Sprie Widget Docs is a documentation theme built with Hugo."
+    meta_og_title = "Sprie Widget Docs Theme"
+    meta_og_type = "website"
+    meta_og_url = "https://docs.sprie.io"
+    meta_og_description = "Sprie Widget Docs is a documentation theme built with Hugo."
+    meta_twitter_card = "summary"
+    meta_twitter_site = "@vikz91"
+    meta_twitter_creator = "@vikz91"
+
+  [params.logo]
+      mobile = "/images/logo.jpg"
+      standard  = "/images/logo.jpg"
