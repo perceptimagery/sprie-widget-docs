@@ -1,0 +1,32 @@
+{
+  "logo": {
+    "text": "Sprie Widget Docs",
+    "type": "link",
+    "path": "index.html"
+  },
+  "main": [
+    {
+      "text": "SWAGGER",
+      "type": "label"
+    },
+    {
+      "text": "UI",
+      "type": "link",
+      "path": "swagger/ui.html"
+    },
+    {
+      "text": "To HTML",
+      "type": "link",
+      "path": "swagger/to-html.html"
+    },
+    {
+      "text": "SUPPORT",
+      "type": "label"
+    },
+    {
+      "text": "Email us",
+      "type": "link",
+      "path": "mailto:hello@sprie.io"
+    }
+  ]
+}
