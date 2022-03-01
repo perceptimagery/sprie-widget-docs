@@ -1,5 +1,5 @@
 ---
-title: 'Install Theme'
+title: 'Basic Usage'
 date: 2019-02-11T19:27:37+10:00
 draft: false
 weight: 3
@@ -13,7 +13,7 @@ hugo new site mynewsite
 
 This will create a fresh Hugo site in the folder `mynewsite`.
 
-## Install theme
+## Basic Usage
 
 Copy or git clone this theme into the sites themes folder `mynewsite/themes`
 
