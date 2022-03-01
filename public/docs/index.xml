@@ -1,73 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Overview on Sprie Widget Docs</title>
-    <link>https://docs.sprie.io/docs/</link>
-    <description>Recent content in Overview on Sprie Widget Docs</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 28 Feb 2022 15:14:39 +1000</lastBuildDate><atom:link href="https://docs.sprie.io/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Quick Start Guide</title>
-      <link>https://docs.sprie.io/docs/quick-start/</link>
-      <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/quick-start/</guid>
-      <description>Syntax highlighting and menus can be configured via &lt;code&gt;config.toml&lt;/code&gt;.</description>
-    </item>
-    
-    <item>
-      <title>Basic Usage</title>
-      <link>https://docs.sprie.io/docs/basic/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/basic/</guid>
-      <description>Create a new Hugo site hugo new site mynewsite This will create a fresh Hugo site in the folder mynewsite.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on Sprie Widget Docs</title><link>https://docs.sprie.io/docs/</link><description>Recent content in Overview on Sprie Widget Docs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 28 Feb 2022 15:14:39 +1000</lastBuildDate><atom:link href="https://docs.sprie.io/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Quick Start Guide</title><link>https://docs.sprie.io/docs/quick-start/</link><pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate><guid>https://docs.sprie.io/docs/quick-start/</guid><description>Syntax highlighting and menus can be configured via &lt;code>config.toml&lt;/code>.</description></item><item><title>Basic Usage</title><link>https://docs.sprie.io/docs/basic/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>https://docs.sprie.io/docs/basic/</guid><description>Create a new Hugo site hugo new site mynewsite This will create a fresh Hugo site in the folder mynewsite.
 Basic Usage Copy or git clone this theme into the sites themes folder mynewsite/themes
 Install with Git cd mynewsite cd themes git clone https://github.com/jugglerx/hugo-whisper-theme.git Install from .zip file You can download the .zip file located here https://github.com/JugglerX/hugo-whisper-theme/archive/master.zip.
-Extract the downloaded .zip inside the themes folder. Rename the extracted folder from hugo-whisper-theme-master -&amp;gt; hugo-whisper-theme.</description>
-    </item>
-    
-    <item>
-      <title>Events</title>
-      <link>https://docs.sprie.io/docs/events/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/events/</guid>
-      <description>&lt;p&gt;Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Advanced Usage</title>
-      <link>https://docs.sprie.io/docs/advanced/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/advanced/</guid>
-      <description>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official installation guide
+Extract the downloaded .zip inside the themes folder. Rename the extracted folder from hugo-whisper-theme-master -&amp;gt; hugo-whisper-theme.</description></item><item><title>Events</title><link>https://docs.sprie.io/docs/events/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>https://docs.sprie.io/docs/events/</guid><description>&lt;p>Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p></description></item><item><title>Advanced Usage</title><link>https://docs.sprie.io/docs/advanced/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>https://docs.sprie.io/docs/advanced/</guid><description>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official installation guide
 Check Hugo Version This theme uses Hugo Pipes to compile SCSS and minify assets. Please make sure you have the Hugo Extended version installed. If you are not using the extended version this theme will not not compile.
-hugo version </description>
-    </item>
-    
-    <item>
-      <title>Wordpress</title>
-      <link>https://docs.sprie.io/docs/wordpress/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/wordpress/</guid>
-      <description>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official installation guide
+hugo version</description></item><item><title>Wordpress</title><link>https://docs.sprie.io/docs/wordpress/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>https://docs.sprie.io/docs/wordpress/</guid><description>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official installation guide
 Check Hugo Version This theme uses Hugo Pipes to compile SCSS and minify assets. Please make sure you have the Hugo Extended version installed. If you are not using the extended version this theme will not not compile.
-hugo version </description>
-    </item>
-    
-    <item>
-      <title>Troubleshoot</title>
-      <link>https://docs.sprie.io/docs/troubleshoot/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      
-      <guid>https://docs.sprie.io/docs/troubleshoot/</guid>
-      <description>Markdown Test Page  Headings Paragraphs Blockquotes Lists Horizontal rule Table Code Inline elements   Headings Heading one Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.
-Heading two Aute officia nulla deserunt do deserunt cillum velit magna.</description>
-    </item>
-    
-  </channel>
-</rss>
+hugo version</description></item><item><title>Troubleshoot</title><link>https://docs.sprie.io/docs/troubleshoot/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>https://docs.sprie.io/docs/troubleshoot/</guid><description>Markdown Test Page Headings Paragraphs Blockquotes Lists Horizontal rule Table Code Inline elements Headings Heading one Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.
+Heading two Aute officia nulla deserunt do deserunt cillum velit magna.</description></item></channel></rss>
