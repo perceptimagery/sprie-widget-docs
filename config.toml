@@ -41,11 +41,11 @@ summaryLength = 30
   # enable_anchor_link = true
 
   [params.homepage_meta_tags]
-    meta_description = "Sprie Widget Docs is a documentation theme built with Hugo."
+    meta_description = "Sprie Widget Docs | Full documentation for Sprie."
     meta_og_title = "Sprie Widget Docs Theme"
     meta_og_type = "website"
     meta_og_url = "https://docs.sprie.io"
-    meta_og_description = "Sprie Widget Docs is a documentation theme built with Hugo."
+    meta_og_description = "Sprie Widget Docs | Full documentation for Sprie."
     meta_twitter_card = "summary"
     meta_twitter_site = "@vikz91"
     meta_twitter_creator = "@vikz91"

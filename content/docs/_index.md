@@ -5,5 +5,9 @@ weight: 1
 ---
 
 ## Sprie Widget
+Assumptions : This document assumes the developer has basic understanding of html, css, and javascript and is able to load html page from a server.  
 
-Sprie Widget is a minimal documentation theme for Hugo. The design and functionality is intentionally minimal. We’re aiming for a similar feel to a Github readme.
+`SprieSDK` is built with react and delivered as **umd** single js script targeted to es5.   
+It can be used in both es6 environments (React, angular, vue) and vanilla es5 environments (plain simple html, jquery, wordpress, etc).
+
+This doc provides complete integration guide to VanillaJS, wordpress.
