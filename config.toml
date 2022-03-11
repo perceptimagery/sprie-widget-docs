@@ -42,7 +42,7 @@ summaryLength = 30
 
   [params.homepage_meta_tags]
     meta_description = "Sprie Widget Docs | Full documentation for Sprie."
-    meta_og_title = "Sprie Widget Docs Theme"
+    meta_og_title = "Sprie Widget Documentation"
     meta_og_type = "website"
     meta_og_url = "https://docs.sprie.io"
     meta_og_description = "Sprie Widget Docs | Full documentation for Sprie."
@@ -51,5 +51,5 @@ summaryLength = 30
     meta_twitter_creator = "@vikz91"
 
   [params.logo]
-      mobile = "/images/logo.jpg"
-      standard  = "/images/logo.jpg"
+      mobile = "/images/logo.png"
+      standard  = "/images/logo.png"
