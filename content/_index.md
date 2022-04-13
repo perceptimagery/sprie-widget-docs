@@ -9,4 +9,4 @@ version : `0.1.1019`
 CDN Link : `https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest`
 
 
-Looking for legacy version? [Look Here](/docs-v1-legacy)
+Looking for Beta version? [Look Here](/docs-beta)
