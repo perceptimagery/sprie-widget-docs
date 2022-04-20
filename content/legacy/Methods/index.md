@@ -1,13 +1,13 @@
 ---
 title: 'Methods'
-date: 2022-04-10T19:27:37+10:00
+date: 2022-03-10T19:27:37+10:00
 weight: 5
 draft: false
 summary: Call specific `Sprie` Methods to manipulate the widget
 ---
 
 ##  ✨ Summary
-`SprieSDK` exposes certain methods through SprieSDK window object. All methods (except `Init`) are authenticated and need you to initialise Sprie with a valid `api-key` first. 
+`SprieSDK` exposes certain methods through the `Loader` object. All methods (except `Init`) are authenticated and need you to initialise Sprie with a valid `api-key` first. 
 
 ## Method Reference
 🍩 Methods
@@ -15,15 +15,17 @@ summary: Call specific `Sprie` Methods to manipulate the widget
 2. Load (sku)
 3. Check (sku)
 4. CheckBatch (skuArray)
-5. Unmount ( )
+5. UnmountAll ( )
 6. GetSprieLink (sku)
+7. HideWidget ( )
+
 
 ## Methods
 #### Init({apiKey})
-`SprieSDK.Init( {apiKey:'xxx-xxx-xxx'} );`
+`SprieSDK.Loader.Init( {apiKey:'xxx-xxx-xxx'} );`
 
 Must be called only once for apiKey authentication.  
-*NOTE*: Internally we cache the authentication and tokens and handle subsequent auths.
+*NOTE*: Must not be called every time product is loaded.  
 
 ###### Params
 **apiKey :** string - apiKey received from Sprie Cloud
@@ -34,7 +36,7 @@ Must be called only once for apiKey authentication.
  
 
 #### Load (sku)
-`SprieSDK.Load( 'your-product-sku' );`
+`SprieSDK.Loader.Load( 'your-product-sku' );`
 
 Call when you want to load a new asset on Sprie AR. Only SKU should be provided.
 
@@ -74,8 +76,8 @@ Call when you want to load a new asset on Sprie AR. Only SKU should be provided.
 ```
  
 
-#### Unmount ( )
-`SprieSDK.Unmount( );`
+#### UnmountAll ( )
+`SprieSDK.Loader.UnmountAll( );`
 
 Removes current instance of SprieSDK from website. This action is stateless, which means, refreshing the page will re-mount it again.
 
@@ -85,4 +87,11 @@ Removes current instance of SprieSDK from website. This action is stateless, whi
 `SprieSDK.GetSprieLink (sku)`
 
 Fetches the share link of the product (with the product page), typically to share it via an app, or show a QR code. this link appends `sprie-sku` query param with the given sku which helps Sprie Widget to open automatically.
+
+ 
+
+#### HideWidget ( )
+`SprieSDK.HideWidget ( );`
+
+Hides the widget as well as the widget icon forcefully. 
 

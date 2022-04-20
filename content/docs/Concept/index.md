@@ -1,6 +1,6 @@
 ---
 title: 'Concepts'
-date: 2022-02-11T19:27:37+10:00
+date: 2022-04-10T19:27:37+10:00
 draft: false
 weight: 2
 summary: Understand basic concepts and terminology used in `Sprie` environment.

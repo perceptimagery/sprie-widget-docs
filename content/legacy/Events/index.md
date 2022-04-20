@@ -38,6 +38,8 @@ All Events are based on `CustomEvent` or `Event`. You can find the respective da
 Considering the previous getting started example, write this code in a script tag below it or, add it to a separate file and import it in the `index.html` file.  
 ```javascript
 // app.js
+SprieSDK.Loader.Init({ apiKey:"xxx-xxx-xxx" }); // if its not initialised yet!
+
 // Listen when Add to Cart button is pressed on Sprie Widget
 document.addEventListener("SprieEvent:onAssetCart", function (e) {
     // e.g. send async/ajax request to an endpoint to add to cart
@@ -55,6 +57,9 @@ document.addEventListener("SprieEvent:onCameraError", function (e) {
 });
 
 ```
+
+Line 2 : Initialise SprieSDK with apiKey you received from Sprie
+
 Line 5-8: Listen for SprieEvent:onAssetCart event which gets triggered on user clicking Add To Cart button.
 
 Line 11-13: Listen for SprieEvent:onCameraDenied event which gets triggered in case the user denies camera permission in the browser.
@@ -72,6 +77,8 @@ _NOTE_: This method must be called only after successful authentication of Sprie
 ```javascript
 // app.js
 const sku = 'my-precious-sku'; 
+const apiKey = 'xxx-xxx-xxx';
+
 var showPreviewButton = false;
 
 var onAuthDoneHandler = function (){
@@ -88,6 +95,8 @@ var onCheckSKUHandler = function (e){
 document.addEventListener("SprieEvent:onAuthOk", onAuthDoneHandler);
 document.addEventListener("SprieEvent:onCheckAssetSKU", onCheckSKUHandler);
 
+SprieSDK.Loader.Init({ apiKey });
+
 ```
 
 
@@ -99,6 +108,8 @@ To handle multiple SKUs, SprieSDK exposes a batch method `CheckSKUBatch`. You ca
 
 ```javascript
 var skuArray = ['my-precious-sku','my-secondary-sku']; 
+var apiKey = 'xxx-xxx-xxx';
+
 var validSkus = [];
 
 const onAuthDone = function (){
@@ -112,5 +123,7 @@ const onCheckSKUBatch = function (e){
 
 document.addEventListener("SprieEvent:onAuthOk", onAuthDone);
 document.addEventListener("SprieEvent:onCheckAssetSKUBatch", onCheckSKUBatch);
+
+SprieSDK.Loader.Init({ apiKey });
 
 ```
