@@ -57,7 +57,7 @@ What we are essentially doing here is stripping the url param path and just taki
 
 
 ### Check Item sku registration with Sprie
-From the above step, we get a sku for a specific product which we want to run through Sprie Check. Now Sprie authentication happens under the hood with the api key provided, and its a asynchronous task. Sprie exposes certain [events](../Events/index.md) to let the developers know when certain actions happen, and how to listen to them.  
+From the above step, we get a sku for a specific product which we want to run through Sprie Check. Now Sprie authentication happens under the hood with the api key provided, and its a asynchronous task. Sprie exposes certain [events](https://docs.sprie.io/docs/events) to let the developers know when certain actions happen, and how to listen to them.  
 In this case, we tap on to `onSDKReady` event to know when the authentication is done and Sprie is ready for use. Put the below code in the same `footer.php` file after the above step.
 
 ```HTML
@@ -77,7 +77,7 @@ In this case, we tap on to `onSDKReady` event to know when the authentication is
 
 ```
 
-Here, what we are doing is listening to `onSDKReady` event, then checking of productSku is not null, and then using [Sprie Methods](../Methods/index.md) to check product registration with Sprie. Once the result is received, we create a custom client event and dispatch the result so that the event can be lateron recevied and 'Try Now' Button can be showed.
+Here, what we are doing is listening to `onSDKReady` event, then checking of productSku is not null, and then using [Sprie Methods](https://docs.sprie.io/docs/methods) to check product registration with Sprie. Once the result is received, we create a custom client event and dispatch the result so that the event can be lateron recevied and 'Try Now' Button can be showed.
 
 
 ### Handle Add to Cart
