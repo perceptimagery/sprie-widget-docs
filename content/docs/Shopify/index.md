@@ -125,10 +125,34 @@ As an example, in Wordpress + Woocommerce setup, you can add it to card in the f
 
 ```JS
 // Handle Add to Cart
-document.addEventListener("SprieEvent:onAssetCart", (e)=>{
+function AddToCart (e){
 	console.log('Added to cart: ',e.detail );
-});
+    const url = `${window.Shopify.routes.root}cart/add.js`;
+    const itemToAdd = Object.keys(variantIdSkuMap).find(x=>variantIdSkuMap[x]===currentVariantSku);
+    const cartBody = {
+      items: [
+        {
+          id: itemToAdd,
+          quantity: 1
+        }
+      ]
+    }
 
+  if(!itemToAdd) return;
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(cartBody)
+    }).then(res => res.json())
+      .then(res => console.log(res));
+  }
+	document.addEventListener("SprieEvent:onAssetCart", (e)=>{
+    AddToCart(e);
+  });
 ```
 
 This particular code uses `onAssetCart` event from Sprie to POST to `/wp-json/wc/store/cart/add-item` api from woo commerce to add the item to cart usig jQuery's `ajax` method, which is by default installed in a wordpress setup.
@@ -201,9 +225,34 @@ Code in `sections> footer.liquid` :
   }); 
 
 	// Handle Add to Cart
-	document.addEventListener("SprieEvent:onAssetCart", (e)=>{
+	function AddToCart (e){
 		console.log('Added to cart: ',e.detail );
-	});
+    const url = `${window.Shopify.routes.root}cart/add.js`;
+    const itemToAdd = Object.keys(variantIdSkuMap).find(x=>variantIdSkuMap[x]===currentVariantSku);
+    const cartBody = {
+      items: [
+        {
+          id: itemToAdd,
+          quantity: 1
+        }
+      ]
+    }
+
+  if(!itemToAdd) return;
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(cartBody)
+    }).then(res => res.json())
+      .then(res => console.log(res));
+  }
+	document.addEventListener("SprieEvent:onAssetCart", (e)=>{
+    AddToCart(e);
+  });
 
   // Handle Variant Change
   function onVariantChange(event) {
