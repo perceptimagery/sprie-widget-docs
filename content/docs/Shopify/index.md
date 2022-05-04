@@ -13,14 +13,17 @@ Shopify App : Comming soon!
 Shopify is an eCommerce website to sell, ship, and process payments. All the activities in Sprie happen in front end. What we can do is break the typical Sprie Workflow into several `liquid` files so that they all take care of specific actions on specific intents.
 
 ## Summary
-1. Initialise Sprie Widget at a common place
-2. Add Preview Button
-3. Translate skus from objects ids
-4. check SKU Registration
-5. Add to Cart
-6. Handle Variants changes
-7. Next Steps
-8. Full Code
+- [Demo](#demo)
+- [Summary](#summary)
+- [Implementation](#implementation)
+	- [Initialise](#initialise)
+	- [Add TryOn Button](#add-tryon-button)
+	- [3. Setup SKU Translation](#3-setup-sku-translation)
+	- [4. Check SKU Registration](#4-check-sku-registration)
+	- [5. Handle Add to Cart](#5-handle-add-to-cart)
+	- [6. Handle Variants changes](#6-handle-variants-changes)
+	- [7. Next Steps](#7-next-steps)
+	- [8. Full Code](#8-full-code)
 
 
 
@@ -32,7 +35,7 @@ All the implementation work requires you to edit `.liquid` files, right off the 
 
 ![Code Editor Location](location.jpg "Location of Code Editor")
 
-### 1. Initialise
+### Initialise
 We would want to initialise Sprie Widget in a place where that particular part of html gets rendered on every single page.
 'footer.liquid' is a very good way to start initialising the widget. 
 Insert the follwing code in `sections > footer.liquid` file : 
@@ -42,7 +45,7 @@ Insert the follwing code in `sections > footer.liquid` file :
 <div id="sdk-widget" data-apikey="<your api key>"></div>
 ```
 
-### 2. Add TryOn Button
+### Add TryOn Button
 The `Preview` TryOn Button should be available where the main product is displayed (PDP - Product Display Page).
 Head on to `sections > main-product.liquid` and put the following code around line number `440` buy buttons in  `product-form__buttons` element : 
 
