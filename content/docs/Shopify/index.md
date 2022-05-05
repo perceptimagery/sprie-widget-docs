@@ -185,14 +185,14 @@ We check for radio button clicks and run `CheckSKU` on them and enable the Previ
 
 ### Show on Collections Page
 To show Try On Button multiple times with each product card, we can use `CheckSKUBatch` method of Sprie to check mulitple SKUs at once, thus removing redundant API calls to Sprie.
-The end goal of this section looks like the image below : 
+The end result of this section looks like the image below : 
 
 ![](collections-page.png)
 
 How do we do it?  
 This required editing two files,
 
-1. `snippets > card-product.liquid` to add the actual buttons : 
+1. In `snippets > card-product.liquid`, add the following code arounf Line Number 147 inside `.card__information` class div. : 
 ```HTML
  <button
     id="tryon-button"
