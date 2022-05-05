@@ -6,7 +6,7 @@ summary: Integrate `SprieSDK` in Shopify
 ---
 
 ## Demo
-Demo Link : `https://demo-sprie.myshopify.com/products/centena-bert-corn?variant=42471361609891`  
+Demo Link : [Shopify Demo](https://demo-sprie.myshopify.com/products/centena-bert-corn?variant=42471361609891)  
 Password : `password` 
 Shopify App : Comming soon!
 
@@ -16,14 +16,14 @@ Shopify is an eCommerce website to sell, ship, and process payments. All the act
 - [Demo](#demo)
 - [Summary](#summary)
 - [Implementation](#implementation)
-	- [Initialise](#initialise)
-	- [Add TryOn Button](#add-tryon-button)
-	- [3. Setup SKU Translation](#3-setup-sku-translation)
-	- [4. Check SKU Registration](#4-check-sku-registration)
-	- [5. Handle Add to Cart](#5-handle-add-to-cart)
-	- [6. Handle Variants changes](#6-handle-variants-changes)
-	- [7. Next Steps](#7-next-steps)
-	- [8. Full Code](#8-full-code)
+  - [Initialise](#initialise)
+  - [Add TryOn Button](#add-tryon-button)
+  - [Setup SKU Translation](#setup-sku-translation)
+  - [Check SKU Registration](#check-sku-registration)
+  - [Handle Add to Cart](#handle-add-to-cart)
+  - [Handle Variants changes](#handle-variants-changes)
+- [Next Steps](#next-steps)
+- [Full Code](#full-code)
 
 
 
@@ -66,7 +66,7 @@ We will add `currentVariantSku` variable in the following steps.
 
 ![](tryon-button.png)
 
-### 3. Setup SKU Translation
+### Setup SKU Translation
 We need a way to send the skus to the `Load` method of the widget to show it properly. Most often times, the SKUs are pre-registered during asset onboard process with Sprie. To acquire the proper skus:
 1. Either it can be generated uniquely and sent over to Sprie in a CSV,  
 2. or, just use the url param of a current item in a PDP ( Product Display Page).
@@ -96,7 +96,7 @@ To use the url-param as sku, we would need to translate the `url` into an `sku`.
 What we are essentially doing here is stripping the url param path, using Shopify API to get current product and/or variant and setting up `currentVariantSku`. If this value is not null, we can Load Sprie on click handler, or do a check with Sprie Network.
 
 
-### 4. Check SKU Registration
+### Check SKU Registration
 From the above step, we get a sku for a specific product which we want to run through Sprie Check. Now Sprie authentication happens under the hood with the api key provided, and its a asynchronous task. Sprie exposes certain [events](https://docs.sprie.io/docs/events) to let the developers know when certain actions happen, and how to listen to them.  
 In this case, we tap on to `onSDKReady` event to know when the authentication is done and Sprie is ready for use. Put the below code in the same `sections > footer.liquid` file after the above step.
 
@@ -122,7 +122,7 @@ document.addEventListener("SprieEvent:onSDKReady", function(e){
 Here, we are listening to `onSDKReady` event, then checking of productSku is not null, and then using [Sprie Methods](https://docs.sprie.io/docs/methods) to check product registration with Sprie. Once the result is received, we immeidtaely show/hide the tryon button that we created in step 2.
 
 
-### 5. Handle Add to Cart
+### Handle Add to Cart
 Sprie offers a Add to Cart CTA on the widget which raises an event with the specific product SKU. You can listen to the event and decide what to do with the Event itself. The reason we do not provide any backend action is because Sprie simply doesn't depende/ bother the frameowkr you are working on and leaves it upto you to decide how you want to implement it.
 As an example, in Wordpress + Woocommerce setup, you can add it to card in the following way : 
 
@@ -161,7 +161,7 @@ function AddToCart (e){
 This particular code uses `onAssetCart` event from Sprie to POST to `/wp-json/wc/store/cart/add-item` api from woo commerce to add the item to cart usig jQuery's `ajax` method, which is by default installed in a wordpress setup.
 
 
-### 6. Handle Variants changes
+### Handle Variants changes
 
 in `sections> footer.liquid`, put this code after the previous step:
 ```JS
@@ -182,10 +182,10 @@ variantElements.forEach((input) => {
 ```
 We check for radio button clicks and run `CheckSKU` on them and enable the Preview `TryOn` button accordingly.
 
-### 7. Next Steps
+## Next Steps
 We are in the process of creatign a plugin which will do all these on your behalf. Once we have completely tested the code, we will announce it and let you know.
 
-### 8. Full Code
+## Full Code
 
 Code in `sections> footer.liquid` :
 
