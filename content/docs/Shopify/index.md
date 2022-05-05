@@ -22,6 +22,7 @@ Shopify is an eCommerce website to sell, ship, and process payments. All the act
   - [Check SKU Registration](#check-sku-registration)
   - [Handle Add to Cart](#handle-add-to-cart)
   - [Handle Variants changes](#handle-variants-changes)
+  - [Show on Collections Page](#show-on-collections-page)
 - [Next Steps](#next-steps)
 - [Full Code](#full-code)
 
@@ -181,6 +182,51 @@ variantElements.forEach((input) => {
 });
 ```
 We check for radio button clicks and run `CheckSKU` on them and enable the Preview `TryOn` button accordingly.
+
+### Show on Collections Page
+To show Try On Button multiple times with each product card, we can use `CheckSKUBatch` method of Sprie to check mulitple SKUs at once, thus removing redundant API calls to Sprie.
+The end goal of this section looks like the image below : 
+
+![](collections-page.png)
+
+How do we do it?  
+This required editing two files,
+
+1. `snippets > card-product.liquid` to add the actual buttons : 
+```HTML
+ <button
+    id="tryon-button"
+    type="button"
+    name="tryon"
+    data-sku="{{ card_product.handle }}"
+    style="display:none; margin-top:1em;"
+    class="button-sprie-tryon button button--small button--secondary"
+    onclick="SprieSDK.Load('{{card_product.handle}}')"  
+    >  Try on 
+</button>
+```
+We simple hide the button initially so that later on we can check for the SKU registration and enable it accordingly, in the following step : 
+
+2. `sections > main-collection-product-grid.liquid`, append the following JS code at bottom : 
+```HTML
+<script>
+  const sprieBtn = document.querySelectorAll('.button-sprie-tryon');
+  const products={{ collection.products | json }} 
+  const productSKUs=products.map(x=>x.handle);
+
+  function StartSKUCheck(){
+    console.log('Checking Batch ...');
+    SprieSDK.CheckSKUBatch([...productSKUs, 'sample-non-existant-sku'])
+    .then(function (result){
+      sprieBtn.forEach(btn=>{
+        btn.style.display=result[btn.getAttribute('data-sku')]?'block':'none';
+      });
+    });
+  }
+  document.addEventListener('SprieEvent:onSDKReady',  StartSKUCheck);
+</script>
+```
+Here, we are listening for `onSDKReady` event of Sprie and then using Shopify liquid variable `{{ collection.products | json }} ` to get the product list and running `CheckSKUBatch` on the SKUs and setting the tryon button to visible accordingly. This can be replicated to Homepage as well. 
 
 ## Next Steps
 We are in the process of creatign a plugin which will do all these on your behalf. Once we have completely tested the code, we will announce it and let you know.
