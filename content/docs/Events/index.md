@@ -19,6 +19,7 @@ All Events are based on `CustomEvent` or `Event`. You can find the respective da
    3. SprieEvent:onAuthErr ({err: string}) 
    4. SprieEvent:onSDKReady () 
    5. SprieEvent:onSDKErr ({err: string})
+   6. SprieEvent:AuthDone ()
 2. IO
    1. SprieEvent:onCameraAllowed ( )
    2. SprieEvent:onCameraDenied ( )
@@ -31,6 +32,10 @@ All Events are based on `CustomEvent` or `Event`. You can find the respective da
    5. SprieEvent:onAssetLoadErr ({sku: string, err: string}) 
    6. SprieEvent:onCheckAssetSKU ({sku: boolean}). e.g. Response : {'your-product-sku':true} // if it already exists
    7. SprieEvent:onCheckAssetSKUBatch ({sku: boolean, … }). e.g. Response : {'your-product-sku':true, 'sku-2':false}
+
+4. Widget
+   1. SprieEvent:onWidgetMinimised ()
+
 
 
 ## Examples
@@ -112,5 +117,17 @@ const onCheckSKUBatch = function (e){
 
 document.addEventListener("SprieEvent:onAuthOk", onAuthDone);
 document.addEventListener("SprieEvent:onCheckAssetSKUBatch", onCheckSKUBatch);
+
+```
+
+#### Hide widget on minimise
+This code hides the widget on receiving the `onWidgetMinimised` event callback
+
+```javascript
+<script>
+     document.addEventListener("SprieEvent:onWidgetMinimised", function () {
+        SprieSDK.Loader.HideWidget();
+     });
+</script>
 
 ```
