@@ -73,7 +73,7 @@ In this case, we tap on to `onSDKReady` event to know when the authentication is
 		// Check product registration if inside product page
 		if(productSku){
 			SprieSDK.CheckSKU(productSku).then(checkResult=>{
-				var event = new Event('SprieClient:onCheckAssetSKU', { bubbles: true, cancelable: false });
+				var event = new Event('SprieEvent:onCheckAssetSKU', { bubbles: true, cancelable: false });
 				productSprieReady = checkResult[productSku];
 				window.dispatchEvent(event);
 			});
@@ -129,7 +129,7 @@ function add_custom_button() {
 <button style="display:none" id="sprie-try-single" type="button" class="btn-atc" onclick="SprieSDK.Load(productSku)" > Try Now</button>
 
 <script>
-    window.addEventListener("SprieClient:onSKUCheck", function(e){
+    window.addEventListener("SprieEvent:onSKUCheck", function(e){
 		const btn = document.querySelector('#sprie-try-single');
         if(productSprieReady){
             btn.style.display = "inline";
