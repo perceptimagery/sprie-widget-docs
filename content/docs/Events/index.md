@@ -122,15 +122,6 @@ document.addEventListener('SprieEvent:onAuthOk', onAuthDone);
 document.addEventListener('SprieEvent:onCheckAssetSKUBatch', onCheckSKUBatch);
 ```
 
-#### Hide widget on minimize
-
-This code hides the widget on receiving the `onWidgetMinimised` event callback
-
-```javascript
-<script>
-     document.addEventListener("SprieEvent:onWidgetMinimised", function () {
-        SprieSDK.HideWidget();
-     });
-</script>
+```
 
 ```
