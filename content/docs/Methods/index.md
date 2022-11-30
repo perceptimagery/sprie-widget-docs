@@ -48,7 +48,7 @@ Call when you want to load a new asset on Sprie AR. Only SKU should be provided.
 
 **Events :** SprieEvent:onAssetLoading, SprieEvent:onAssetLoadOk, SprieEvent:onAssetLoadErr
 
-#### Check (sku)
+#### CheckSKU (sku)
 
 `SprieSDK.CheckSKU( 'your-product-sku' );`
 
@@ -63,7 +63,7 @@ _(optional)_ Can be called to check if the product is registered with Sprie or n
 `{"my-precious-product":true}`
 `true` signifies `my-precious-product` exists with Sprie and can safely be loaded.
 
-#### CheckBatch (skuArray)
+#### CheckSKUBatch (skuArray)
 
 `SprieSDK.CheckSKUBatch( ['your-product-sku', 'your-product-sku2'] );`
 
