@@ -21,19 +21,17 @@ Copy paste this code in a html file
 
 ```html
 <!-- STEP 1. Load Sprie CDN Script with api key (most preferred way to integrate )-->
-<script src=“https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey=<apikey>“></script>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-embed@latest?apikey={apikey}"></script>
 
-                        OR
+OR
 <!-- STEP 1. Load Sprie CDN Script -->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest"></script>
 
 <!-- STEP 2. Intialize -->
 <div id="sdk-widget" data-apikey="api-key"></div>
 
 <!-- STEP 3. Trigger -->
-<button onclick="SprieSDK.Load('product-sku');"> Preview </button>
-
+<button onclick="SprieSDK.Load('product-sku');">Preview</button>
 ```
 
 ### Explanation
