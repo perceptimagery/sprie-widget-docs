@@ -35,6 +35,10 @@ We would want to Initialize Sprie Widget in a place where that particular part o
 Insert the following code in `footer.php` file, after `<?php wp_footer(); ?>` :
 
 ```HTML
+<!-- STEP 1. Load Sprie CDN Script with api key (most preferred way to integrate )-->
+<script src=“https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey=<apikey>“></script>
+
+                        OR
 <!-- Sprie -->
 <script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest"></script>
 <div id="sdk-widget" data-apikey="<your api key>"></div>
