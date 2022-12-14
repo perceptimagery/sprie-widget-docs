@@ -37,7 +37,7 @@ All Events are based on `CustomEvent` or `Event`. You can find the respective da
    7. SprieEvent:onCheckAssetSKUBatch ({sku: boolean, … }). e.g. Response : {'your-product-sku':true, 'sku-2':false}
 
 4. Widget
-   1. SprieEvent:onWidgetMinimised ()
+   1. SprieEvent:onWidgetMinimized ()
 
 ## Examples
 
