@@ -42,8 +42,7 @@ We would want to initialise Sprie Widget in a place where that particular part o
 Insert the follwing code in `sections > footer.liquid` file : 
 ```HTML
 <!-- Sprie -->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest"></script>
-<div id="sdk-widget" data-apikey="<your api key>"></div>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey={apikey}"></script>
 ```
 
 ### Add TryOn Button
@@ -237,8 +236,7 @@ Code in `sections> footer.liquid` :
 
 ```HTML
 <!-- Sprie -->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest"></script>
-<div id="sdk-widget" data-apikey="579e87f3b327061b39"></div>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey={apikey}"></script>
 <script>
 
   // Utilities

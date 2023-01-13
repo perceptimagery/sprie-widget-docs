@@ -23,16 +23,11 @@ Copy paste this code in a html file
 <!-- STEP 1. Load Sprie CDN Script with api key (most preferred way to integrate )-->
 <script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-embed@latest?apikey={apikey}"></script>
 
-OR
-<!-- STEP 1. Load Sprie CDN Script -->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest"></script>
-
-<!-- STEP 2. Intialize -->
-<div id="sdk-widget" data-apikey="api-key"></div>
-
-<!-- STEP 3. Trigger -->
+<!-- STEP 2. Trigger -->
 <button onclick="SprieSDK.Load('product-sku');">Preview</button>
 ```
+
+Remember to replace the `{apikey}` with a valid apikey that you received from sprie.
 
 ### Explanation
 
