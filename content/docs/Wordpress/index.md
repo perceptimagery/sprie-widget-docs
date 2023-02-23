@@ -36,7 +36,7 @@ Insert the following code in `footer.php` file, after `<?php wp_footer(); ?>` :
 
 ```HTML
 <!-- STEP 1. Load Sprie CDN Script with api key (most preferred way to integrate )-->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-embed@latest?apikey={apikey}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey={apikey}"></script>
 ```
 
 ### Write SKU Translator

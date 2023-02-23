@@ -21,7 +21,7 @@ Copy paste this code in a html file
 
 ```html
 <!-- STEP 1. Load Sprie CDN Script with api key (most preferred way to integrate )-->
-<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-embed@latest?apikey={apikey}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@perceptimagery/sprie-widget@latest?apikey={apikey}"></script>
 
 <!-- STEP 2. Trigger -->
 <button onclick="SprieSDK.Load('product-sku');">Preview</button>
