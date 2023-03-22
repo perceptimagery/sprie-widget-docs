@@ -1,6 +1,6 @@
 ---
 title: "SprieEmbed"
-date: 2022-10-07T10:40:39+05:30
+date: 2023-03-22T10:40:39+05:30
 draft: false
 weight: 9
 summary: Embed Sprie Preview anywhere
@@ -13,13 +13,34 @@ summary: Embed Sprie Preview anywhere
 ## Summary
 - [What is Sprie Embed?](#what-is-sprie-embed)
 - [Summary](#summary)
+- [Changes](#changes)
+  - [Whats new:](#whats-new)
+  - [Breaking Chnages:](#breaking-chnages)
 - [Implementation](#implementation)
   - [Pre-requisites](#pre-requisites)
   - [Initialise](#initialise)
   - [Load 3d Previews](#load-3d-previews)
 - [Customisation](#customisation)
+- [Universal barcode](#universal-barcode)
 - [Full Code](#full-code)
+- [Troubleshoot](#troubleshoot)
+  - [Nothing is visible](#nothing-is-visible)
+  - [Loader is throughout the whole page](#loader-is-throughout-the-whole-page)
+  - [More issues](#more-issues)
 
+## Changes
+Version : 0.0.3100
+
+### Whats new:
+1. namespaced sku loader `data-sprie-sku`
+2. new barcode attribute `data-sprie-barcode`
+3. style issues fixed
+
+
+### Breaking Chnages:
+1. `data-sku` is being deprecated in favour of `data-sprie-sku`.  
+This is being done in order to avoid attribute pollution in DOM. Please update your embed code to follow latest guidelines. `data-sku` will still be supported for 45 days to give time to users to make the changes.  
+`data-sku` attribute will be removed on 31st May 2023.
 
 
 ## Implementation
@@ -42,44 +63,47 @@ Get the APIKey from Sprie. Paste the following code in footer or a place that is
 
 ### Load 3d Previews
 Declarative API helps you in organising the preview with more control and easier to use interface.  
-`sprie-embed-element` is very critical and that is how Sprie identifies where to load the previews. the `data-sku` value is what is uses to send across Sprie Server to get information about the asset. 
+`sprie-embed-element` is very critical and that is how Sprie identifies where to load the previews. the `data-sprie-sku` value is what is uses to send across Sprie Server to get information about the asset. 
 ```HTML
-<!-- Declare element with class `sprie-embed-element` and data-sku. This will get transformed after authentication -->
+<!-- Declare element with class `sprie-embed-element` and data-sprie-sku. This will get transformed after authentication -->
 <div
     class="sprie-embed-element"
-    data-sku="{sku}"
+    data-sprie-sku="{sku}"
 ></div>
 ```
 
 ## Customisation
 You can inject classes dynamically to the underlying content with `data-class` attribute.  
-You can also customise how the preview looks by providing customisation options in `data-model-optionos` attribute. 
+You can also customise how the preview looks by providing customisation options in `data-model-options` attribute. 
 
 
 Currently, only transparent background is supported, but we will be adding more options in future. 
 ```HTML
 <div
     class="sprie-embed-element"
-    data-sku="{sku}"
+    data-sprie-sku="{sku}"
     data-class="custom-element-class"
     data-model-options="transparent=0"
 ></div>
 
 ```
 
+## Universal barcode
+You can also add barcode id to `data-sprie-barcode` attribute. Please make sure either one of barcode or sku is present as attribute.
+
 
 ## Full Code
 ```HTML
 <div
     class="sprie-embed-element"
-    data-sku="{sku}"
+    data-sprie-sku="{sku}"
 ></div>
 
 <br />
 
 <div
     class="sprie-embed-element"
-    data-sku="{sku}"
+    data-sprie-sku="{sku}"
     data-class="custom-element-class"
     data-model-options="transparent=0"
 ></div>
@@ -90,3 +114,22 @@ Currently, only transparent background is supported, but we will be adding more 
 
 
 ```
+
+## Troubleshoot
+### Nothing is visible
+
+1. Check apikey (check in network tab > authentication)
+2. check sku / barcode
+
+### Loader is throughout the whole page
+ add css to the `sprie-embed-element` class 
+ ```CSS
+    .sprie-embed-element{
+        position: relative;
+        height: max-content;
+        width: max-content;
+    }
+ ```
+
+ ### More issues 
+ Please file issues at <a href="mailto:tech@perceptimagery.com?subject=Sprie%20Embed%20issue&body=Issue%20regarding%20Sprie%20Embed%3A%0A">Sprie Help</a>
