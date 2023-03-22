@@ -14,8 +14,8 @@ summary: Embed Sprie Preview anywhere
 - [What is Sprie Embed?](#what-is-sprie-embed)
 - [Summary](#summary)
 - [Changes](#changes)
-  - [Whats new:](#whats-new)
-  - [Breaking Chnages:](#breaking-chnages)
+    - [Features](#features)
+    - [Breaking Changes](#breaking-changes)
 - [Implementation](#implementation)
   - [Pre-requisites](#pre-requisites)
   - [Initialise](#initialise)
@@ -31,13 +31,13 @@ summary: Embed Sprie Preview anywhere
 ## Changes
 Version : 0.0.3100
 
-### Whats new:
+#### Features
 1. namespaced sku loader `data-sprie-sku`
 2. new barcode attribute `data-sprie-barcode`
 3. style issues fixed
 
 
-### Breaking Chnages:
+#### Breaking Changes
 1. `data-sku` is being deprecated in favour of `data-sprie-sku`.  
 This is being done in order to avoid attribute pollution in DOM. Please update your embed code to follow latest guidelines. `data-sku` will still be supported for 45 days to give time to users to make the changes.  
 `data-sku` attribute will be removed on 31st May 2023.
