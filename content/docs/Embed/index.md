@@ -20,8 +20,8 @@ summary: Embed Sprie Preview anywhere
   - [Pre-requisites](#pre-requisites)
   - [Initialise](#initialise)
   - [Load 3d Previews](#load-3d-previews)
+  - [Universal barcode](#universal-barcode)
 - [Customisation](#customisation)
-- [Universal barcode](#universal-barcode)
 - [Full Code](#full-code)
 - [Troubleshoot](#troubleshoot)
   - [Nothing is visible](#nothing-is-visible)
@@ -72,6 +72,11 @@ Declarative API helps you in organising the preview with more control and easier
 ></div>
 ```
 
+### Universal barcode
+You can also add barcode id to `data-sprie-barcode` attribute. Please make sure either one of barcode or sku is present as attribute.
+
+
+
 ## Customisation
 You can inject classes dynamically to the underlying content with `data-class` attribute.  
 You can also customise how the preview looks by providing customisation options in `data-model-options` attribute. 
@@ -87,9 +92,6 @@ Currently, only transparent background is supported, but we will be adding more 
 ></div>
 
 ```
-
-## Universal barcode
-You can also add barcode id to `data-sprie-barcode` attribute. Please make sure either one of barcode or sku is present as attribute.
 
 
 ## Full Code
