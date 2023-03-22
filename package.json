@@ -9,7 +9,8 @@
     "dev": "hugo serve",
     "build": "hugo"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "hugo": "^0.0.3"
   }
 }
