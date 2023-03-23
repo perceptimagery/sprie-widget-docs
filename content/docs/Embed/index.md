@@ -29,12 +29,15 @@ summary: Embed Sprie Preview anywhere
   - [More issues](#more-issues)
 
 ## Changes
-Version : 0.0.3100
+Version : 0.1.1001
 
 #### Features
 1. namespaced sku loader `data-sprie-sku`
 2. new barcode attribute `data-sprie-barcode`
 3. style issues fixed
+4. loader full css fixed
+5. full sketchfab options proxy
+6. full strictly typed DX, interfaces, etc.
 
 
 #### Breaking Changes
@@ -122,8 +125,10 @@ Currently, only transparent background is supported, but we will be adding more 
 
 1. Check apikey (check in network tab > authentication)
 2. check sku / barcode
+3. Try in in-cognito tab
 
 ### Loader is throughout the whole page
+ __FIXED:__ this is fixed in the version 0.1.1001. The answer below is kept for historical use
  add css to the `sprie-embed-element` class 
  ```CSS
     .sprie-embed-element{
