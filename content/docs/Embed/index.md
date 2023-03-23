@@ -85,7 +85,7 @@ You can inject classes dynamically to the underlying content with `data-class` a
 You can also customise how the preview looks by providing customisation options in `data-model-options` attribute. 
 
 
-Currently, only transparent background is supported, but we will be adding more options in future. 
+Currently, only transparent background and autostart is supported, but we will be adding more options in future. 
 ```HTML
 <div
     class="sprie-embed-element"
@@ -95,6 +95,19 @@ Currently, only transparent background is supported, but we will be adding more 
 ></div>
 
 ```
+
+ ---
+__Multiple Params__
+```HTML
+<div
+    class="sprie-embed-element"
+    data-sprie-sku="{sku}"
+    data-class="custom-element-class"
+    data-model-options="transparent=1&autostart=0"
+></div>
+
+```
+
 
 
 ## Full Code
