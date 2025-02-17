@@ -1,6 +1,6 @@
 {
   "name": "sprie-widget-docs",
-  "version": "1.1.9007",
+  "version": "1.2.1001",
   "main": "index.js",
   "repository": "git@github.com:perceptimagery/sprie-widget-docs.git",
   "author": "Abhishek Deb <abhishek@perceptimagery.com>",
@@ -9,8 +9,5 @@
     "dev": "hugo serve",
     "build": "hugo"
   },
-  "devDependencies": {},
-  "dependencies": {
-    "hugo": "^0.0.3"
-  }
+  "dependencies": {}
 }

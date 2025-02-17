@@ -26,16 +26,22 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
-    name = "Docs"
-    url = "/docs/"
+    name = "Sprie Widget"
+    url = "/Widget/"
     weight = 2
+
+[[menu.main]]
+    name = "Sprie Embed"
+    url = "/Embed/"
+    weight = 3
 
 [params]
   google_analytics_id=""
-  homepage_button_link = '/docs'
+  homepage_button_link = '/Widget'
   homepage_button_text = 'Get Started'
   homepage_intro = 'Sprie Widget Docs'
   homepage_image = '/images/sprie-trans.gif'
+  mainSections = ["widget", "embed"]
 
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
@@ -47,9 +53,12 @@ summaryLength = 30
     meta_og_url = "https://docs.sprie.io"
     meta_og_description = "Sprie Widget Docs | Full documentation for Sprie."
     meta_twitter_card = "summary"
-    meta_twitter_site = "@vikz91"
-    meta_twitter_creator = "@vikz91"
 
   [params.logo]
       mobile = "/images/logo.png"
       standard  = "/images/logo.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,6 +1,4 @@
-{{- if .Site.IsServer -}}
-  <!-- Dont add Google analytics to localhost -->
-{{ else }}
+{{- if hugo.IsProduction -}}
   {{ $gid := (getenv "HUGO_GOOGLE_ANALYTICS_ID") }}
   {{ if $gid }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
