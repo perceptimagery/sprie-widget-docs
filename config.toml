@@ -27,17 +27,17 @@ summaryLength = 30
 
 [[menu.main]]
     name = "Sprie Widget"
-    url = "/Widget/"
+    url = "/widget/"
     weight = 2
 
 [[menu.main]]
     name = "Sprie Embed"
-    url = "/Embed/"
+    url = "/embed/"
     weight = 3
 
 [params]
   google_analytics_id=""
-  homepage_button_link = '/Widget'
+  homepage_button_link = '/widget'
   homepage_button_text = 'Get Started'
   homepage_intro = 'Sprie Widget Docs'
   homepage_image = '/images/sprie-trans.gif'
